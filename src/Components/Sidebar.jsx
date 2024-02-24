@@ -2,7 +2,14 @@ import { AutoStories, Home, Group, Storefront, Person, Settings, AccountBoxRound
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
 import React from "react";
 
-export default function Sidebar() {
+export default function Sidebar({mode, setMode}) {
+  const handleTheme=()=>{
+    if(mode==='dark'){
+      setMode('light')
+    }else{
+      setMode('dark')
+    }
+  }
   return (
     <Box sx={{display:{sm:'block', xs:'none'}}} flex={1}>
     <Box position={"fixed"} >
@@ -76,7 +83,7 @@ export default function Sidebar() {
             <ListItemIcon>
               <ModeNight />
             </ListItemIcon>
-              <Switch />
+              <Switch onChange={handleTheme} />
           </ListItemButton>
         </ListItem>
       </List>

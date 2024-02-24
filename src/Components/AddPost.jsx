@@ -1,7 +1,7 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Add } from "@mui/icons-material";
-export default function AddPost() {
+export default function AddPost({mode}) {
   const [anchorEl,setAnchorEl]=useState(false)
   const handleClick=()=>{
     setAnchorEl(true)
@@ -11,11 +11,13 @@ export default function AddPost() {
   }
   return (
     <Box
+      bgcolor={"background.default"}
+      color={"text.primary"}
       sx={{
         position: "fixed",
         boxShadow: { xs: " 10px 10px 10px 10px #121212", sm: "0" },
         p: { xs: "10px", sm: "0px" },
-        background: { xs: "white", sm: "none" },
+        background: { xs: {  }, sm: "none" },
         width: "100%",
         display: "flex",
         justifyContent: { xs: "center", sm: "start" },

@@ -117,7 +117,7 @@ export default function Rightbar() {
             src="https://mui.com/static/images/avatar/6.jpg"
           />
         </AvatarGroup>
-        <ImageList sx={{ width: 465, height: 450 }}>
+        <ImageList sx={{ width: 500, height: 450 }}>
           <ImageListItem key="Subheader" cols={2}>
             <ListSubheader component="div">December</ListSubheader>
           </ImageListItem>
@@ -179,7 +179,7 @@ export default function Rightbar() {
             <ListItemAvatar>
               <Avatar
                 alt="Travis Howard"
-                src="https://mui.com/static/images/avatar/4.jpg"
+                src="https://mui.com/static/images/avatar/6.jpg"
               />
             </ListItemAvatar>
             <ListItemText
@@ -202,10 +202,7 @@ export default function Rightbar() {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar
-                alt="Cindy Baker"
-                src="https://mui.com/static/images/avatar/5.jpg"
-              />
+              <Avatar alt="Cindy Baker" src="https://mui.com/static/images/avatar/6.jpg" />
             </ListItemAvatar>
             <ListItemText
               primary="Oui Oui"

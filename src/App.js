@@ -1,23 +1,38 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Box, Stack } from "@mui/material";
+import React from "react";
+import { Box, Stack, createTheme } from "@mui/material";
+import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import Feeds from "./Components/Feeds";
 import Rightbar from "./Components/Rightbar";
 import AddPost from "./Components/AddPost";
-
-function App() {
+import { ThemeProvider } from "@emotion/react";
+function App() {  
+  const [mode, setMode] = useState("light");
+  const darkTheme = createTheme({
+    palette: {
+      mode,
+    },
+  });
   return (
-    <Stack sx={{ display: "flex", flexDirection: "column" }}>
-      <Navbar />
-      <Stack direction={"row"}>
-        <Sidebar />
-        <Feeds />
-        <Rightbar />
+    <ThemeProvider theme={darkTheme}>
+      <Stack
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          color: "text.primary",
+          backgroundColor: "background.default",
+        }}
+      >
+        <Navbar />
+        <Stack direction={"row"}>
+          <Sidebar mode={mode} setMode={setMode} />
+          <Feeds />
+          <Rightbar />
+        </Stack>
+        <AddPost mode={mode} />
       </Stack>
-      <AddPost />
-    </Stack>
+    </ThemeProvider>
   );
 }
 
