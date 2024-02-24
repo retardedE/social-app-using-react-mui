@@ -1,7 +1,8 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 export default function AddPost() {
   return (
-    <div>AddPost</div>
+    <Box width='12.5%' bgcolor={'lightgoldenrodyellow'}>AddPost</Box>
   )
 }
