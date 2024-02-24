@@ -1,10 +1,18 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import React from "react";
+import Post from "./Post";
 
 export default function Feeds() {
   return (
-    <Box flex={5} bgcolor={"lightgray"}>
-      Feeds
-    </Box>
+    <Stack sx={{display:'block'}} spacing={3} flex={5}>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+    </Stack>
   );
 }
